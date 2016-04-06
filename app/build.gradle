@@ -12,9 +12,18 @@ android {
         versionName "1.0"
     }
     buildTypes {
+
+        debug {
+            // disable rollbar
+            buildConfigField "boolean", "USE_ROLLBAR", "false"
+            ext.enableRollbar = false
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // enable rollbar
+            buildConfigField "boolean", "USE_ROLLBAR", "true"
+            ext.enableRollbar = true
         }
     }
 }
@@ -24,4 +33,13 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.1'
     compile 'com.android.support:design:23.2.1'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
+    compile 'com.pixplicity.easyprefs:library:1.7'
+    compile 'de.greenrobot:eventbus:2.4.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.drivemode:TypefaceHelper:1.0.0@aar'
+    compile files('libs/rollbar-android-0.1.2.jar')
+
 }
