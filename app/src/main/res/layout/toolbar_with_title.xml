@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical">
 
-        <com.kulcare.android.widgets.CustomTextView
+        <android.com.soundrolling.Widget.CustomTextView
             android:id="@+id/tv_toolbar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -21,8 +21,7 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:textColor="@color/white"
-            android:textSize="@dimen/text_size_font"
-            font:typeface="fonts/helveticaneuelight.ttf" />
+            android:textSize="@dimen/text_16dp"/>
     </RelativeLayout>
 
 </android.support.v7.widget.Toolbar>
