@@ -17,7 +17,7 @@ public class SoundRollingActivity extends AppCompatActivity implements SoundRoll
 
     public SoundRollingPresenter kulcarePresenter;
 
-    Toolbar toolbar;
+    public Toolbar toolbar;
 
     CustomTextView tv_toolbar_title;
 
@@ -25,8 +25,8 @@ public class SoundRollingActivity extends AppCompatActivity implements SoundRoll
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        toolbar = (Toolbar)findViewById(R.id.toolbar);
-        tv_toolbar_title=(CustomTextView)findViewById(R.id.tv_toolbar_title);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        tv_toolbar_title = (CustomTextView) findViewById(R.id.tv_toolbar_title);
         kulcarePresenter = new SoundRollingPresenterImpl(this, this);
         if (toolbar != null) {
             setSupportActionBar(toolbar);
