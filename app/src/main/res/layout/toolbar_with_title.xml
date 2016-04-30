@@ -10,18 +10,19 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical">
+        android:gravity="center">
 
-        <android.com.soundrolling.Widget.CustomTextView
+        <matt.com.soundrolling.Widget.CustomTextView
             android:id="@+id/tv_toolbar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:ellipsize="end"
+            android:textStyle="bold"
             android:singleLine="true"
             android:textColor="@color/white"
-            android:textSize="@dimen/text_16dp"/>
+            android:textSize="@dimen/text_20dp"/>
     </RelativeLayout>
 
 </android.support.v7.widget.Toolbar>

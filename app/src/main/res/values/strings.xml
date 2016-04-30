@@ -12,4 +12,11 @@
 
     <string name="rollbar_token">0e612b45ad4f492a940aa797301c7b20</string>
     <string name="environment">production</string>
+
+    <string name="enter_email">Enter your email</string>
+    <string name="password">Password</string>
+    <string name="sign_in_using">OR SIMPLY SIGN IN USING</string>
+    <string name="welcome">Welcome</string>
+    <string name="valid_email">Please enter valid email id</string>
+    <string name="valid_password">Password must be minimum 4 character long.</string>
 </resources>
