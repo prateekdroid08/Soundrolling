@@ -42,5 +42,6 @@ dependencies {
     compile 'com.drivemode:TypefaceHelper:1.0.0@aar'
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
     compile files('libs/rollbar-android-0.1.2.jar')
-
+    compile 'com.google.android.gms:play-services-gcm:8.4.0'
+    compile 'com.facebook.android:facebook-android-sdk:4.1.0'
 }

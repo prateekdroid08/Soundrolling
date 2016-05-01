@@ -2,6 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.soundrolling">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="com.kulcare.android.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.soundrolling.permission.C2D_MESSAGE" />
+
+
     <application
         android:name="matt.com.soundrolling.SoundRollingApplication"
         android:allowBackup="true"
@@ -21,6 +31,38 @@
         </activity>
 
         <activity android:name="matt.com.soundrolling.View.Activity.LoginActivity" />
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.soundrolling" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="matt.com.soundrolling.gcm.GcmMessageHandler"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="matt.com.soundrolling.gcm.RegistrationIntentService"
+            android:exported="false" />
+
+        <service
+            android:name="matt.com.soundrolling.gcm.MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+
     </application>
 
 </manifest>

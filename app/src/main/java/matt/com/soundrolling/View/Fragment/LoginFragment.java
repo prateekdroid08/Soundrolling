@@ -5,6 +5,7 @@ import matt.com.soundrolling.Preseneter.sound_rolling.login.LoginPresenterImpl;
 import matt.com.soundrolling.Preseneter.sound_rolling.login.LoginView;
 import matt.com.soundrolling.Utils.ViewUtils;
 import matt.com.soundrolling.View.Activity.LoginActivity;
+
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -18,6 +19,7 @@ import com.soundrolling.R;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import matt.com.soundrolling.Widget.progress.ProgressDialog;
 
 /**
  * Created by prateekarora on 30/04/16.
@@ -34,6 +36,8 @@ public class LoginFragment extends Fragment implements LoginView {
     MaterialEditText etPassword;
 
     LoginPresenter loginPresenter;
+
+    ProgressDialog progressDialog;
 
 
     @Nullable
@@ -66,17 +70,24 @@ public class LoginFragment extends Fragment implements LoginView {
 
     @Override
     public void showProgress() {
-
+        if (!getActivity().isFinishing()) {
+            if (progressDialog == null)
+                progressDialog = new ProgressDialog(getActivity());
+            progressDialog.show();
+        }
     }
 
     @Override
     public void hideProgress() {
-
+        if (!getActivity().isFinishing()) {
+            if (progressDialog != null)
+                progressDialog.dismiss();
+        }
     }
 
     @Override
-    public void onSuccess() {
-
+    public void onSuccess(String message) {
+        ViewUtils.showMessage(getActivity(), message);
     }
 
     @Override

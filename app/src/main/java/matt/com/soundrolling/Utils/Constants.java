@@ -5,4 +5,5 @@ package matt.com.soundrolling.Utils;
  */
 public class Constants {
     public static final int SPLASH_TIME = 1000;
+    public static final String DEVICE_TOKEN = "";
 }
