@@ -6,6 +6,7 @@ import android.content.ContextWrapper;
 
 import com.drivemode.android.typeface.TypefaceHelper;
 import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
 import com.pixplicity.easyprefs.library.Prefs;
 import com.rollbar.android.Rollbar;
 import com.soundrolling.R;
@@ -31,6 +32,7 @@ public class SoundRollingApplication extends Application {
         TypefaceHelper.initialize(this);
 
         FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
 
         Rollbar.init(this, getResources().getString(R.string.rollbar_token),
                 getResources().getString(R.string.environment));
