@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Soundrolling</string>
     <string name="action_settings">Settings</string>
-    <string name="base_url_staging">http://</string>
+    <string name="base_url_staging">http://soundscrolling.techrajsolutions.com/staging/index.php/</string>
 
     <!--Error messages-->
     <string name="error_network">Internet not available</string>
@@ -9,7 +9,17 @@
     <string name="error_unknown">Unkown error occured</string>
     <string name="error_network_http_error">Bad response from server</string>
     <string name="error_no_location_selected">Please select the location</string>
+    <string name="gcm_defaultSenderId">802715607437</string>
 
     <string name="rollbar_token">0e612b45ad4f492a940aa797301c7b20</string>
     <string name="environment">production</string>
+
+    <string name="enter_email">Enter your email</string>
+    <string name="password">Password</string>
+    <string name="sign_in_using">OR SIMPLY SIGN IN USING</string>
+    <string name="welcome">Welcome</string>
+    <string name="valid_email">Please enter valid email id</string>
+    <string name="android">Android</string>
+    <string name="valid_password">Password must be minimum 4 character long.</string>
+    <string name="facebook_app_id">900199130088986</string>
 </resources>

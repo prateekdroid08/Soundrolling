@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "android.com.soundrolling"
+        applicationId "com.soundrolling"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
@@ -40,6 +40,8 @@ dependencies {
     compile 'de.greenrobot:eventbus:2.4.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.drivemode:TypefaceHelper:1.0.0@aar'
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
     compile files('libs/rollbar-android-0.1.2.jar')
-
+    compile 'com.google.android.gms:play-services-gcm:8.4.0'
+    compile 'com.facebook.android:facebook-android-sdk:4.1.0'
 }
