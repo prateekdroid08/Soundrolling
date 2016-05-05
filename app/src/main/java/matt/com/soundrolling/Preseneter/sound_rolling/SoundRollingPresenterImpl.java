@@ -53,7 +53,7 @@ public class SoundRollingPresenterImpl implements SoundRollingPresenter {
     public void oneStepBack() {
         FragmentTransaction fts = ((SoundRollingActivity) ctx).getSupportFragmentManager().beginTransaction();
         FragmentManager fragmentManager = ((SoundRollingActivity) ctx).getSupportFragmentManager();
-        if (fragmentManager.getBackStackEntryCount() >= 2) {
+        if (fragmentManager.getBackStackEntryCount() > 0) {
             fragmentManager.popBackStackImmediate();
             fts.commit();
         } else {

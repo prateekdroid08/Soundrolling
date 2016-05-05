@@ -14,9 +14,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -75,6 +73,17 @@ public class LoginFragment extends Fragment implements LoginView {
         registerCallback();
 
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        ((LoginActivity) getActivity()).toolbar.setVisibility(View.VISIBLE);
+    }
+
+    @OnClick(R.id.new_user)
+    void onNewUserClick(){
+        ((LoginActivity) getActivity()).soundRollingPresenter.navigateTo(SignUpFragment.newInstance());
     }
 
     @Override

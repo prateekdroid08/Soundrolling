@@ -10,20 +10,27 @@
     <string name="error_network_http_error">Bad response from server</string>
     <string name="error_no_location_selected">Please select the location</string>
     <string name="gcm_defaultSenderId">802715607437</string>
-
-    <string name="rollbar_token">0e612b45ad4f492a940aa797301c7b20</string>
-    <string name="environment">production</string>
-
-    <string name="enter_email">Enter your email</string>
-    <string name="sign_in_using">OR SIMPLY SIGN IN USING</string>
-    <string name="welcome">Welcome</string>
     <string name="valid_email">Please enter valid email id</string>
     <string name="android">Android</string>
     <string name="valid_password">Password must be minimum 4 character long.</string>
+    <string name="first_name_validation">First name must be minimum 4 character long.</string>
+    <string name="last_name_validation">Last name must be minimum 4 character long.</string>
+    <string name="valid_country">Please select your country.</string>
+
+    <!--Third party API Keys-->
+    <string name="rollbar_token">0e612b45ad4f492a940aa797301c7b20</string>
     <string name="facebook_app_id">900199130088986</string>
+
+    <!--String messages for the layouts and Java file -->
+    <string name="enter_email">Enter your email</string>
+    <string name="sign_in_using">OR SIMPLY SIGN IN USING</string>
+    <string name="welcome">Welcome</string>
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
     <string name="country">Country</string>
+    <string name="environment">production</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
+    <string name="new_user">New User?</string>
+    <string name="join_community">Join the Community</string>
 </resources>
