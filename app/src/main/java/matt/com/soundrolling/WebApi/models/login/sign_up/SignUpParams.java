@@ -7,7 +7,6 @@ public class SignUpParams {
     String email;
     String f_name;
     String l_name;
-    String country;
     String password;
     String signup_type;
 
@@ -33,14 +32,6 @@ public class SignUpParams {
 
     public void setL_name(String l_name) {
         this.l_name = l_name;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
     }
 
     public String getPassword() {

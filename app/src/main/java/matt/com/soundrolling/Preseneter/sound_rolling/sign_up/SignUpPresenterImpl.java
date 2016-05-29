@@ -28,9 +28,7 @@ public class SignUpPresenterImpl implements SignUpPresenter, SignUpListener {
             signUpView.onError(context.getResources().getString(R.string.first_name_validation));
         else if (params.getL_name().trim().length() < 4)
             signUpView.onError(context.getResources().getString(R.string.last_name_validation));
-        else if (params.getCountry().trim().length() < 0)
-            signUpView.onError(context.getResources().getString(R.string.country));
-        else if (params.getEmail().trim().length() == 0 || AppUtils.isEmailValid(params.getEmail().toString()))
+        else if (params.getEmail().trim().length() == 0 || !(AppUtils.isEmailValid(params.getEmail().toString())))
             signUpView.onError(context.getResources().getString(R.string.valid_email));
         else if (params.getPassword().trim().length() < 4)
             signUpView.onError(context.getResources().getString(R.string.valid_password));

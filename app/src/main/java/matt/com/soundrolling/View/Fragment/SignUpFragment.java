@@ -32,8 +32,6 @@ public class SignUpFragment extends Fragment implements SignUpView {
     MaterialEditText etFirstName;
     @Bind(R.id.last_name)
     MaterialEditText etLastName;
-    @Bind(R.id.country)
-    MaterialEditText etCountry;
     @Bind(R.id.email)
     MaterialEditText etEmail;
     @Bind(R.id.password)
@@ -103,7 +101,6 @@ public class SignUpFragment extends Fragment implements SignUpView {
         SignUpParams params = new SignUpParams();
         params.setF_name(etFirstName.getText().toString());
         params.setL_name(etLastName.getText().toString());
-        params.setCountry(etCountry.getText().toString());
         params.setEmail(etEmail.getText().toString());
         params.setPassword(etPassword.getText().toString());
         presenter.onSignUp(params);

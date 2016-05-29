@@ -8,105 +8,99 @@
 
     <include
         android:id="@+id/toolbar_title_with_back"
-        layout="@layout/toolbar_title_with_back_btn"/>
+        layout="@layout/toolbar_title_with_back_btn" />
 
-    <com.rengwuxian.materialedittext.MaterialEditText
-        android:id="@+id/first_name"
-        app:met_baseColor="@android:color/black"
-        app:met_floatingLabel="highlight"
-        app:met_primaryColor="@color/theme_color"
-        app:met_singleLineEllipsis="true"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_20dp"
-        android:drawableLeft="@drawable/ic_user_selctd"
-        android:drawablePadding="@dimen/padding_10dp"
-        android:hint="@string/first_name"
-        android:inputType="text"
-        android:paddingLeft="@dimen/padding_20dp"
-        android:textCursorDrawable="@drawable/text_cursor_cyan"
-        android:textSize="@dimen/text_20sp" />
+        android:layout_height="match_parent">
 
-    <com.rengwuxian.materialedittext.MaterialEditText
-        android:id="@+id/last_name"
-        app:met_baseColor="@android:color/black"
-        app:met_floatingLabel="highlight"
-        app:met_primaryColor="@color/theme_color"
-        app:met_singleLineEllipsis="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_20dp"
-        android:drawableLeft="@drawable/ic_user_selctd"
-        android:drawablePadding="@dimen/padding_10dp"
-        android:hint="@string/last_name"
-        android:inputType="text"
-        android:paddingLeft="@dimen/padding_20dp"
-        android:textCursorDrawable="@drawable/text_cursor_cyan"
-        android:textSize="@dimen/text_20sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-    <com.rengwuxian.materialedittext.MaterialEditText
-        android:id="@+id/country"
-        app:met_baseColor="@android:color/black"
-        app:met_floatingLabel="highlight"
-        app:met_primaryColor="@color/theme_color"
-        app:met_singleLineEllipsis="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_20dp"
-        android:drawableLeft="@drawable/ic_country_icon_selctd"
-        android:drawablePadding="@dimen/padding_10dp"
-        android:hint="@string/country"
-        android:inputType="text"
-        android:paddingLeft="@dimen/padding_20dp"
-        android:textCursorDrawable="@drawable/text_cursor_cyan"
-        android:textSize="@dimen/text_20sp" />
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:drawableLeft="@drawable/ic_user_selctd"
+                android:drawablePadding="@dimen/padding_10dp"
+                android:hint="@string/first_name"
+                android:inputType="text"
+                android:paddingLeft="@dimen/padding_20dp"
+                android:textCursorDrawable="@drawable/text_cursor_cyan"
+                android:textSize="@dimen/text_20sp"
+                app:met_baseColor="@android:color/black"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/theme_color"
+                app:met_singleLineEllipsis="true" />
 
-    <com.rengwuxian.materialedittext.MaterialEditText
-        android:id="@+id/email"
-        app:met_baseColor="@android:color/black"
-        app:met_floatingLabel="highlight"
-        app:met_primaryColor="@color/theme_color"
-        app:met_singleLineEllipsis="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_20dp"
-        android:drawableLeft="@drawable/ic_email_selctd"
-        android:drawablePadding="@dimen/padding_10dp"
-        android:hint="@string/email"
-        android:inputType="text"
-        android:paddingLeft="@dimen/padding_20dp"
-        android:textCursorDrawable="@drawable/text_cursor_cyan"
-        android:textSize="@dimen/text_20sp" />
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_user_selctd"
+                android:drawablePadding="@dimen/padding_10dp"
+                android:hint="@string/last_name"
+                android:inputType="text"
+                android:paddingLeft="@dimen/padding_20dp"
+                android:textCursorDrawable="@drawable/text_cursor_cyan"
+                android:textSize="@dimen/text_20sp"
+                app:met_baseColor="@android:color/black"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/theme_color"
+                app:met_singleLineEllipsis="true" />
 
-    <com.rengwuxian.materialedittext.MaterialEditText
-        android:id="@+id/password"
-        app:met_baseColor="@android:color/black"
-        app:met_floatingLabel="highlight"
-        app:met_primaryColor="@color/theme_color"
-        app:met_singleLineEllipsis="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_20dp"
-        android:drawableLeft="@drawable/ic_password_icon_selctd"
-        android:drawablePadding="@dimen/padding_10dp"
-        android:hint="@string/password"
-        android:inputType="text"
-        android:paddingLeft="@dimen/padding_20dp"
-        android:textCursorDrawable="@drawable/text_cursor_cyan"
-        android:textSize="@dimen/text_20sp" />
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_email_selctd"
+                android:drawablePadding="@dimen/padding_10dp"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="@dimen/padding_20dp"
+                android:textCursorDrawable="@drawable/text_cursor_cyan"
+                android:textSize="@dimen/text_20sp"
+                app:met_baseColor="@android:color/black"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/theme_color"
+                app:met_singleLineEllipsis="true" />
 
-    <TextView
-        android:id="@+id/btn_signup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_20dp"
-        android:background="@drawable/ic_signup_bttn"/>
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_password_icon_selctd"
+                android:drawablePadding="@dimen/padding_10dp"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:paddingLeft="@dimen/padding_20dp"
+                android:textCursorDrawable="@drawable/text_cursor_cyan"
+                android:textSize="@dimen/text_20sp"
+                app:met_baseColor="@android:color/black"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/theme_color"
+                app:met_singleLineEllipsis="true" />
 
-    <TextView
-        android:id="@+id/btn_facebook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_20dp"
-        android:background="@drawable/ic_fb_bttn"/>
+            <TextView
+                android:id="@+id/btn_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:background="@drawable/ic_signup_bttn" />
+
+            <TextView
+                android:id="@+id/btn_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:layout_marginBottom="@dimen/margin_20dp"
+                android:background="@drawable/ic_fb_bttn" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
