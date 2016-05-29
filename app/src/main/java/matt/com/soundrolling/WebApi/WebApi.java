@@ -3,6 +3,7 @@ package matt.com.soundrolling.WebApi;
 
 import matt.com.soundrolling.WebApi.models.login.LoginParams;
 import matt.com.soundrolling.WebApi.models.login.LoginResponse;
+import matt.com.soundrolling.WebApi.models.login.sign_up.SignUpParams;
 import retrofit.Callback;
 import retrofit.http.Body;
 import retrofit.http.POST;
@@ -13,7 +14,7 @@ import retrofit.http.POST;
 public interface WebApi {
 
     @POST("/Signup")
-    void signUpUser(@Body LoginParams mLoginParams, Callback<LoginResponse> cb);
+    void signUpUser(@Body SignUpParams mLoginParams, Callback<LoginResponse> cb);
 
     @POST("/Login")
     void loginUser(@Body LoginParams mLoginParams, Callback<LoginResponse> cb);

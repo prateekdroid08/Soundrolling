@@ -13,7 +13,7 @@ import com.soundrolling.R;
 
 public class SoundRollingActivity extends AppCompatActivity implements SoundRollingView {
 
-    public SoundRollingPresenter kulcarePresenter;
+    public SoundRollingPresenter soundRollingPresenter;
 
     public Toolbar toolbar;
 
@@ -25,7 +25,7 @@ public class SoundRollingActivity extends AppCompatActivity implements SoundRoll
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         tv_toolbar_title = (CustomTextView) findViewById(R.id.tv_toolbar_title);
-        kulcarePresenter = new SoundRollingPresenterImpl(this, this);
+        soundRollingPresenter = new SoundRollingPresenterImpl(this, this);
         if (toolbar != null) {
             setSupportActionBar(toolbar);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -37,7 +37,7 @@ public class SoundRollingActivity extends AppCompatActivity implements SoundRoll
             toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    kulcarePresenter.oneStepBack();
+                    soundRollingPresenter.oneStepBack();
                 }
             });
         }
