@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/bottom_lay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:weightSum="3">
+
+        <matt.com.soundrolling.Widget.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/home"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_16dp"
+            font:typeface="fonts/montserrat_light.otf" />
+
+        <matt.com.soundrolling.Widget.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/favorites"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_16dp"
+            font:typeface="fonts/montserrat_light.otf" />
+
+        <matt.com.soundrolling.Widget.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/settings"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_16dp"
+            font:typeface="fonts/montserrat_light.otf" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/top_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_lay">
+
+        <RelativeLayout
+            android:id="@+id/rl_lay1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:gravity="center"
+            android:padding="@dimen/padding_10dp">
+
+            <matt.com.soundrolling.Widget.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/timecode_cheetsheet"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_16dp"
+                font:typeface="fonts/montserrat_light.otf" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_forward_icon" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rl_lay1"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:background="@color/black" />
+
+        <RelativeLayout
+            android:id="@+id/rl_lay2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:gravity="center"
+            android:padding="@dimen/padding_10dp">
+
+            <matt.com.soundrolling.Widget.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/sound_manuals"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_16dp"
+                font:typeface="fonts/montserrat_light.otf" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_forward_icon" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rl_lay2"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:background="@color/black" />
+
+        <RelativeLayout
+            android:id="@+id/rl_lay3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view2"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:gravity="center"
+            android:padding="@dimen/padding_10dp">
+
+            <matt.com.soundrolling.Widget.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/camera_manuals"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_16dp"
+                font:typeface="fonts/montserrat_light.otf" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_forward_icon" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rl_lay3"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:background="@color/black" />
+
+        <RelativeLayout
+            android:id="@+id/rl_lay4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view3"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:gravity="center"
+            android:padding="@dimen/padding_10dp">
+
+            <matt.com.soundrolling.Widget.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/sound_chat"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_16dp"
+                font:typeface="fonts/montserrat_light.otf" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_forward_icon" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rl_lay4"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:background="@color/black" />
+
+        <RelativeLayout
+            android:id="@+id/rl_lay5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view4"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:gravity="center"
+            android:padding="@dimen/padding_10dp">
+
+            <matt.com.soundrolling.Widget.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/blogs"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_16dp"
+                font:typeface="fonts/montserrat_light.otf" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_forward_icon" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rl_lay5"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:background="@color/black" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

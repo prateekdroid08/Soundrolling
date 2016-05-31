@@ -30,4 +30,10 @@ public class LoginActivity extends SoundRollingActivity {
             e.printStackTrace();
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        soundRollingPresenter.oneStepBack();
+    }
 }

@@ -3,7 +3,9 @@ package matt.com.soundrolling.View.Fragment;
 import matt.com.soundrolling.Preseneter.sound_rolling.login.LoginPresenter;
 import matt.com.soundrolling.Preseneter.sound_rolling.login.LoginPresenterImpl;
 import matt.com.soundrolling.Preseneter.sound_rolling.login.LoginView;
+import matt.com.soundrolling.Utils.Constants;
 import matt.com.soundrolling.Utils.ViewUtils;
+import matt.com.soundrolling.View.Activity.HomeActivity;
 import matt.com.soundrolling.View.Activity.LoginActivity;
 
 import android.content.Intent;
@@ -22,6 +24,7 @@ import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
+import com.pixplicity.easyprefs.library.Prefs;
 import com.rengwuxian.materialedittext.MaterialEditText;
 import com.soundrolling.R;
 
@@ -82,7 +85,7 @@ public class LoginFragment extends Fragment implements LoginView {
     }
 
     @OnClick(R.id.new_user)
-    void onNewUserClick(){
+    void onNewUserClick() {
         ((LoginActivity) getActivity()).soundRollingPresenter.navigateTo(SignUpFragment.newInstance());
     }
 
@@ -131,7 +134,10 @@ public class LoginFragment extends Fragment implements LoginView {
 
     @Override
     public void onSuccess(String message) {
-        ViewUtils.showMessage(getActivity(), message);
+        /* Save login Prefs */
+        Prefs.putBoolean(Constants.IS_LOGIN, true);
+        startActivity(new Intent(getActivity(), HomeActivity.class));
+        getActivity().finish();
     }
 
     @Override

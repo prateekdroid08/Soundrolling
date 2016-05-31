@@ -5,4 +5,5 @@
     <color name="colorAccent">#FE7102</color>
     <color name="theme_color">#FE7102</color>
     <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
 </resources>

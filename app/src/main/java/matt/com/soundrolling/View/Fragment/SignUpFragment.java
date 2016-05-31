@@ -130,6 +130,7 @@ public class SignUpFragment extends Fragment implements SignUpView {
 
     @Override
     public void onSuccess(String message) {
+        ((LoginActivity) getActivity()).onBackPressed();
         ViewUtils.showMessage(getActivity(), message);
     }
 

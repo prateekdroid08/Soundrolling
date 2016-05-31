@@ -32,5 +32,16 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="new_user">New User?</string>
+    <string name="home">HOME</string>
+    <string name="favorites">FAVORITES</string>
+    <string name="settings">SETTINGS</string>
     <string name="join_community">Join the Community</string>
+    <string name="timecode_cheetsheet">Timecode Cheetsheet</string>
+    <string name="sound_manuals">Sound Manuals</string>
+    <string name="camera_manuals">Camera Manuals</string>
+    <string name="sound_chat">Sound Chats</string>
+    <string name="blogs">Blogs</string>
+    <string name="sound_rolling">Soundrolling</string>
+    <string name="sound_chat_url">http://soundrolling.com/sound-chats-archive/?format=rss</string>
+    <string name="blog_url">http://soundrolling.com/blog/?format=rss</string>
 </resources>
