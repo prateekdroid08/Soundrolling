@@ -19,9 +19,11 @@ package matt.com.soundrolling.WebApi.rss_parser;
 public class RssItem {
     String title;
     String link;
-    String lastBuildDate;
-    String generator;
-    String description;
+    String category;
+    String dc_creator;
+    String pubDate;
+    String content_encoded;
+    String media_content;
 
 
     public String getTitle() {
@@ -40,27 +42,43 @@ public class RssItem {
         this.title = title;
     }
 
-    public String getLastBuildDate() {
-        return lastBuildDate;
+    public String getCategory() {
+        return category;
     }
 
-    public void setLastBuildDate(String lastBuildDate) {
-        this.lastBuildDate = lastBuildDate;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
-    public String getGenerator() {
-        return generator;
+    public String getDc_creator() {
+        return dc_creator;
     }
 
-    public void setGenerator(String generator) {
-        this.generator = generator;
+    public void setDc_creator(String dc_creator) {
+        this.dc_creator = dc_creator;
     }
 
-    public String getDescription() {
-        return description;
+    public String getPubDate() {
+        return pubDate;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setPubDate(String pubDate) {
+        this.pubDate = pubDate;
+    }
+
+    public String getContent_encoded() {
+        return content_encoded;
+    }
+
+    public void setContent_encoded(String content_encoded) {
+        this.content_encoded = content_encoded;
+    }
+
+    public String getMedia_content() {
+        return media_content;
+    }
+
+    public void setMedia_content(String media_content) {
+        this.media_content = media_content;
     }
 }

@@ -30,9 +30,11 @@ public class RssHandler extends DefaultHandler {
     private RssItem currentItem;
     private boolean parsingTitle;
     private boolean parsingLink;
-    private boolean parsingLastBuildDate;
-    private boolean parsingGenerator;
-    private boolean parsingDescription;
+    private boolean parsingCategory;
+    private boolean parsingDcCreator;
+    private boolean parsingPubDate;
+    private boolean parsingContentEncoded;
+    private boolean parsingMediaContent;
 
     public RssHandler() {
         //Initializes a new ArrayList that will hold all the generated RSS items.
@@ -53,12 +55,16 @@ public class RssHandler extends DefaultHandler {
             parsingTitle = true;
         else if (qName.equals("link"))
             parsingLink = true;
-        else if (qName.equals("lastBuildDate"))
-            parsingLastBuildDate = true;
-        else if (qName.equals("generator"))
-            parsingGenerator = true;
-        else if (qName.equals("description"))
-            parsingDescription = true;
+        else if (qName.equals("category"))
+            parsingCategory = true;
+        else if (qName.equals("dc:creator"))
+            parsingDcCreator = true;
+        else if (qName.equals("pubDate"))
+            parsingPubDate = true;
+        else if (qName.equals("content:encoded"))
+            parsingContentEncoded = true;
+        else if (qName.equals("media:content"))
+            parsingMediaContent = true;
 //        else if (qName.equals("media:thumbnail") || qName.equals("media:content") || qName.equals("image")) {
 //            if (attributes.getValue("url") != null)
 //                currentItem.setImageUrl(attributes.getValue("url"));
@@ -76,12 +82,16 @@ public class RssHandler extends DefaultHandler {
             parsingTitle = false;
         else if (qName.equals("link"))
             parsingLink = false;
-        else if (qName.equals("lastBuildDate"))
-            parsingLastBuildDate = false;
-        else if (qName.equals("generator"))
-            parsingGenerator = false;
-        else if (qName.equals("description"))
-            parsingDescription = false;
+        else if (qName.equals("category"))
+            parsingCategory = false;
+        else if (qName.equals("dc:creator"))
+            parsingDcCreator = false;
+        else if (qName.equals("pubDate"))
+            parsingPubDate = false;
+        else if (qName.equals("content:encoded"))
+            parsingContentEncoded = false;
+        else if (qName.equals("media:content"))
+            parsingMediaContent = false;
     }
 
     //Goes through character by character when parsing whats inside of a tag.
@@ -95,12 +105,16 @@ public class RssHandler extends DefaultHandler {
             else if (parsingLink)
                 currentItem.setLink(new String(ch, start, length));
                 //If parsingDescription is true, then that means we are inside a <description> tag so the text is the description of an item.
-            else if (parsingLastBuildDate)
-                currentItem.setLastBuildDate(new String(ch, start, length));
-            else if (parsingGenerator)
-                currentItem.setGenerator(new String(ch, start, length));
-            else if (parsingDescription)
-                currentItem.setDescription(new String(ch, start, length));
+            else if (parsingCategory)
+                currentItem.setCategory(new String(ch, start, length));
+            else if (parsingDcCreator)
+                currentItem.setDc_creator(new String(ch, start, length));
+            else if (parsingPubDate)
+                currentItem.setPubDate(new String(ch, start, length));
+            else if (parsingContentEncoded)
+                currentItem.setContent_encoded(new String(ch, start, length));
+            else if (parsingMediaContent)
+                currentItem.setMedia_content(new String(ch, start, length));
         }
     }
 }

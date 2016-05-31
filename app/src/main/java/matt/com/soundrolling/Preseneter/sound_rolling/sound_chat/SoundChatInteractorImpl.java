@@ -35,9 +35,10 @@ public class SoundChatInteractorImpl implements SoundChatInteractor {
         protected Void doInBackground(String... params) {
             try {
                 RssReader rssReader = new RssReader(params[0]);
-                for (RssItem item : rssReader.getItems())
+                for (RssItem item : rssReader.getItems()) {
                     Log.d("Title:", item.getTitle());
-
+                    Log.d("Link:", item.getLink());
+                }
             } catch (Exception e) {
                 Log.v("Error Parsing Data", e + "");
             }
